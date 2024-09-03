@@ -1,15 +1,14 @@
 # BD Address
 
-This project provides a set of functions to retrieve information about divisions, districts, upazillas, and unions in Bangladesh.
+This package provides a set of functions to retrieve information about divisions, districts, upazillas, and unions in Bangladesh.
 
 ## Installation
 
 To use this project, you need to have Node.js installed. Then, you can clone the repository and install the dependencies.
 
 ```bash
-git clone <repository-url>
-cd bd-address
-npm install
+git clone [repository-url](https://github.com/syedshaon/bd-address)
+npm install bd-address
 ```
 
 ## Usage
@@ -46,11 +45,11 @@ console.log(`Upazillas in District ${districtId}:`, upazillasByDistrict);
 
 ## Methods
 
-BDADDRESS.divisions(): Returns all divisions.
-BDADDRESS.districts(): Returns all districts.
-BDADDRESS.district(id): Returns districts filtered by the given division id. If no id is provided, it returns a message asking for a division id.
-BDADDRESS.upazillas(): Returns all upazillas.
-BDADDRESS.upazilla(id): Returns upazillas filtered by the given district id. If no id is provided, it returns a message asking for a district id.
+* BDADDRESS.divisions(): Returns all divisions.
+* BDADDRESS.districts(): Returns all districts.
+* BDADDRESS.district(id): Returns districts filtered by the given division id. If no id is provided, it returns a message asking for a division id.
+* BDADDRESS.upazillas(): Returns all upazillas.
+* BDADDRESS.upazilla(id): Returns upazillas filtered by the given district id. If no id is provided, it returns a message asking for a district id.
 
 ## Example Data Structure
 
