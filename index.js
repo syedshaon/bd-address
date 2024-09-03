@@ -43,5 +43,4 @@ class BDADDRESS {
 }
 
 export default BDADDRESS;
-
-console.log(BDADDRESS.divisions());
+export { divisions, districts, district, upazillas, upazilla, unions } from "./BDADDRESS";
