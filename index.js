@@ -2,8 +2,9 @@ import divisions from "./assets/divisions.js";
 import districts from "./assets/districts.js";
 import upazillas from "./assets/upazillas.js";
 import unions from "./assets/unions.js";
+import postCodes from "./assets/postCodes.js";
 
-class BDADDRESS {
+class BdAddress {
   static divisions() {
     return divisions;
   }
@@ -29,17 +30,23 @@ class BDADDRESS {
     }
     return this.upazillas().filter((upazilla) => upazilla.district_id === id.toString());
   }
-
-  static unions() {
-    return unions;
-  }
-
-  static union(id) {
-    if (!id) {
-      return { message: "Plese insert a upazilla id as params." };
-    }
-    return this.unions().filter((union) => union.upazilla_id === id.toString());
-  }
 }
 
-export default BDADDRESS;
+function bdUnions() {
+  return unions;
+}
+
+function bdUnionByUpazilla(id) {
+  if (!id) {
+    return { message: "Plese insert a upazilla id as params." };
+  }
+  return bdUnions().filter((union) => union.upazilla_id === id.toString());
+}
+
+function bdPostCodes() {
+  return postCodes;
+}
+
+export default BdAddress;
+
+export { bdUnions, bdUnionByUpazilla, bdPostCodes };
