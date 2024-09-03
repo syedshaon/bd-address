@@ -43,4 +43,3 @@ class BDADDRESS {
 }
 
 export default BDADDRESS;
-export { divisions, districts, district, upazillas, upazilla, unions } from "./BDADDRESS";
