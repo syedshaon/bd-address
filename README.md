@@ -4,22 +4,21 @@ This package provides a set of functions to retrieve information about divisions
 
 ## Installation
 
-To use this project, you need to have Node.js installed. Then, you can clone the repository and install the dependencies.
+To use this project, you need to have Node.js installed. Then, you can install from [npm](https://www.npmjs.com/) or clone the repository.
 
 ```bash
+npm install bd-address
 git clone https://github.com/syedshaon/bd-address
-cd bd-address
-npm install
 ```
 
 ## Usage
 
-You can import the BdAddress class and other functions from index.js and use their methods to get the required data.
+You can import the BdAddress class and other functions from "bd-address" or index.js and use their methods to get the required data.
 
 ## Example
 
 ```
-import BdAddress, { bdUnions, bdUnionByUpazilla, bdPostCodes } from './index.js';
+import BdAddress, { bdUnions, bdUnionByUpazilla, bdPostCodes } from "bd-address";
 
 // Get all divisions
 const allDivisions = BdAddress.divisions();
@@ -79,8 +78,10 @@ Division
 
 ```[
   {
-    "id": "1",
-    "name": "Dhaka"
+    id: "1",
+    name: "Chattagram",
+    bn_name: "চট্টগ্রাম",
+    url: "www.chittagongdiv.gov.bd"
   },
   ...
 ]
@@ -91,9 +92,13 @@ District
 ```
 [
   {
-    "id": "1",
-    "division_id": "1",
-    "name": "Dhaka"
+    id: "1",
+    division_id: "1",
+    name: "Comilla",
+    bn_name: "কুমিল্লা",
+    lat: "23.4682747",
+    lon: "91.1788135",
+    url: "www.comilla.gov.bd"
   },
   ...
 ]
@@ -104,9 +109,11 @@ Upazilla
 ```
 [
   {
-    "id": "1",
-    "district_id": "1",
-    "name": "Dhamrai"
+    id: "1",
+    district_id: "1",
+    name: "Debidwar",
+    bn_name: "দেবিদ্বার",
+    url: "debidwar.comilla.gov.bd"
   },
   ...
 ]
@@ -117,12 +124,37 @@ Union
 ```
 [
   {
-    "id": "1",
-    "upazilla_id": "1",
-    "name": "Kamalpur"
+    "id":"1",
+    "upazilla_id":"1",
+    "name":"Subil",
+    "bn_name":"সুবিল",
+    "url":"subilup.comilla.gov.bd"
   },
   ...
 ]
+```
+
+Post Codes
+
+```
+{
+  "1206 ": {
+    en: {
+      division: "Dhaka",
+      district: "Dhaka ",
+      thana: "Dhaka ",
+      suboffice: "Dhaka Cantonment--TSO ",
+      postcode: "1206 ",
+    },
+    bn: {
+      division: "ঢাকা",
+      district: "ঢাকা ",
+      thana: "ঢাকা সেনানিবাস ",
+      suboffice: "ঢাকা সেনানিবাস TSO ",
+      postcode: "১২০৬ ",
+    },
+  },
+}
 ```
 
 License
