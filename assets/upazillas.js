@@ -493,6 +493,7 @@ const upazillas = [
   { id: "492", district_id: "9", name: "Eidgaon", bn_name: "ঈদগাঁও", url: "null" },
   { id: "493", district_id: "39", name: "Madhyanagar", bn_name: "মধ্যনগর", url: "null" },
   { id: "494", district_id: "50", name: "Dasar", bn_name: "ডাসার", url: "null" },
+  { id: "495", district_id: "47", name: "Dhaka Sadar", bn_name: "ঢাকা সদর", url: "dhaka.gov.bd" },
 ];
 
 export default upazillas;
