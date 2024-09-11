@@ -1,6 +1,6 @@
 {
   "name": "bd-address",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "It returns division, district, upazila, unions of Bangladesh in Bengali and English",
   "main": "index.js",
   "type": "module",
